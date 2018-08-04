@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="N.P. Brosowsky" content="stroop Demo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Stylesheets
+	============================================= -->
+    <link rel="stylesheet" href="stroop.css" type="text/css" />
+
+
+    <!--- Javascript on page load
+	============================================= -->
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="stroop.js"></script>
+
+    <!-- Document Title
+	============================================= -->
+    <title>Classic stroop Demo</title>
+
+</head>
+
+<body>
+    <!-- Trial Counter Display
+		============================================= -->
+    <div class="top">
+        <h1 class="countDisplay"></h1>
+    </div>
+    <!-- #trial count display end -->
+
+    <!-- Content
+		============================================= -->
+    <div class="contentDisplay">
+        <div class="instructionDisplay">
+            <p>
+                Welcome to the experiment!
+            </p>
+            <p>
+                On every trial you'll see a color word (e.g., "red", "green") in a colored font (e.g., "<span style="color: red">red</span>", "<span style="color: blue">red</span>")
+            </p>
+            <p>
+                Your task is to ignore the word and identify the <em>color of the font</em>.
+            </p>
+            <p>
+                Use the keyboard to make your response:
+            </p>
+            <p>
+                Press "R" if the color is red, "B" if the color is blue, "G" if the color is green, or "Y" if the color is yellow. Try answer as quickly and as accurately as possible.
+            </p>
+            <p>
+                Press the "start" button to begin the first trial.
+            </p>
+            <button id="beginExp" class="button">start</button>
+        </div>
+
+        <div class="targetDisplay"></div>
+        <div class="feedbackDisplay"></div>
+
+        <div class="exitDisplay">
+          <div class="debrief">
+            Below are your results. You can download the complete data set by clicking the button below.
+          </div>
+          <div class="results-1"></div>
+          <div class="results-2"></div>
+          <div class="results-3"></div>
+          <br />
+          <button id="downloadCSV" class="button">download data</button>
+        </div>
+
+    </div>
+    <!-- #content end -->
+
+
+    <script>
+    /* runs function that will set up the initial display, functions for listening for keypresses and buttons */
+    initiateDisplay();
+    </script>
+
+</body>
+
+</html>

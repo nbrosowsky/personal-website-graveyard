@@ -1,0 +1,18 @@
+<script type="text/javascript">
+function speakthis(msg) {
+    var speechMessage = new SpeechSynthesisUtterance(msg);
+    window.speechSynthesis.speak(speechMessage);
+}
+</script>
+<p><?php speak_button('this is button one'); ?>&nbsp;this is button 1</p>
+<p><?php speak_button('this is button two'); ?>&nbsp;this is button 2</p>
+</body>
+</html>
+
+<?php 
+function speak_button($msg) {
+    ?>
+<button onclick="speakthis('<?php echo $msg; ?>')" value="Click Me">
+<?php
+return;
+}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal academic website for Nicholaus Brosowsky">
+    <meta name="keywords" content="Psychology, Learning, Memory, Attention, Nicholaus Brosowsky, N.P. Brosowsky">
+    <meta name="author" content="Nicholaus P. Brosowsky">
+    <title>N.P. Brosowsky | Online Experiments and Demos</title>
+    <link rel="shortcut icon" href="/images/favicon_32.png" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <header class="z-depth-3 white ">
+        <div class="container OE-top-nav">
+            <div class="row">
+                <div class="col s12">
+                    <div style="border-bottom: solid; padding: 5px">
+                        <h5 style="font-weight: 500">Online Psychology Experiments &amp; Demos</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col s6">
+                    <ul id="filters-top" class="filters button-group norm-line-height" style="background-color: transparent; margin-top: 0;">
+                        <h6>Filter Experiments</h6>
+                        <li style="padding-left: 20px">
+                            <button class="button btn-flat-checkbox checkButton" data-filter="*">
+                  <span class="hvr-flat-span" >Show All</span>
+                </button>
+                        </li>
+                        <li style="padding-left: 20px">
+                            <button class="button btn-flat-checkbox checkButton" data-filter=".attention">
+                  <span class="hvr-flat-span">Attention</span>
+                </button>
+                        </li>
+                        <li style="padding-left: 20px">
+                            <button class=" button btn-flat-checkbox checkButton" data-filter=".memory">
+                  <span class="hvr-flat-span">Memory</span>
+                </button>
+                        </li>
+                        <li style="padding-left: 20px">
+                            <button class="button btn-flat-checkbox checkButton" data-filter=".learning">
+                  <span class="hvr-flat-span">Learning</span>
+                </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s6">
+                    <div>
+                        <h6 style="background-color: transparent;">More Information</h6>
+                        <a class="btn-flat norm-line-height left-align" style="font-size: 0.8rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+                  Are online psychology experiments reliable?
+              </a>
+                        <a class="btn-flat norm-line-height left-align" style="font-size: 0.8rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+                  About this website
+              </a>
+                        <a class="btn-flat norm-line-height left-align" style="font-size: 0.8rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+                  About me
+              </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <a id="logo-container" href="#" class="brand-logo flow-text"><span class="title-text">Cognitive Psychology</span></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
+        </div>
+
+        <ul id="nav-mobile" class="OE-side-nav side-nav fixed">
+            <li>
+                <div class="userView" style="min-height: 150px; border-bottom: solid; padding: 20px">
+                    <h5 style="font-weight: 500">Online Psychology Experiments &amp; Demos</h5>
+                </div>
+            </li>
+            <ul id="filters-side" class="filters button-group norm-line-height" style="background-color: transparent; padding-left: 20px; padding-top: 20px;">
+                <h6>Filter Experiments</h6>
+                <li>
+                    <button class="button btn-flat-checkbox checkButton is-checked" data-filter="*">
+            <span class="hvr-flat-span" >Show All</span>
+          </button>
+                </li>
+                <li>
+                    <button class="button btn-flat-checkbox checkButton" data-filter=".attention">
+            <span class="hvr-flat-span">Attention</span>
+          </button>
+                </li>
+                <li>
+                    <button class=" button btn-flat-checkbox checkButton" data-filter=".memory">
+            <span class="hvr-flat-span">Memory</span>
+          </button>
+                </li>
+                <li>
+                    <button class="button btn-flat-checkbox checkButton" data-filter=".learning">
+            <span class="hvr-flat-span">Learning</span>
+          </button>
+                </li>
+            </ul>
+            <br />
+
+            <div style="margin-top: 50px">
+                <h6 style="background-color: transparent; padding-left: 20px; padding-top: 20px;">More Information</h6>
+                <a class="btn-flat norm-line-height left-align" style="font-size: 0.9rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+            Are online psychology experiments reliable?
+        </a>
+                <a class="btn-flat norm-line-height left-align" style="font-size: 0.9rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+            About this website
+        </a>
+                <a class="btn-flat norm-line-height left-align" style="font-size: 0.9rem; line-height: normal; width: 100%; height: inherit; padding-top: 5px; padding-bottom: 5px">
+            About me
+        </a>
+            </div>
+        </ul>
+
+    </header>
+    <main class="OE-pad-left s12 grey lighten-4">
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="col s10">
+                <p>
+
+                </p>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="grid">
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 metalloid " data-category="metalloid">
+                        <div class="card exp-card">
+
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroopB.png" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Stroop Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge red white-text">Attention</span>
+                            </div>
+                        </div>
+
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 attention memory learning" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/flankerB.png" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge red white-text">Attention</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                                <span class="sm-badge green white-text">Learning</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 attention" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/flankerB.png" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">Levels of Processing</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand">Visual Search</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 learning memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 attention memory learning" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/flankerB.png" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge red white-text">Attention</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                                <span class="sm-badge green white-text">Learning</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 attention" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/flankerB.png" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">Levels of Processing</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand">Visual Search</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 learning memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand">Visual Search</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 learning memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand">Visual Search</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+                    <div class="hvr-title element-item col s12 m6 l4 xl3 learning memory" data-category="metalloid">
+                        <div class="card exp-card">
+                            <div class="card-image" style="max-height: 75px; overflow: hidden">
+                                <img src="images/stroop.jpg" />
+                            </div>
+                            <div class="card-content">
+                                <a href="#" class=" card-title black-text" style="cursor: pointer; cursor: hand; ">The Flanker Effect</a>
+                            </div>
+                            <div class="card-action exp-card-footer">
+                                <span class="sm-badge green white-text">Learning</span>
+                                <span class="sm-badge blue white-text">Memory</span>
+                            </div>
+                        </div>
+                        <a href="#modal1"><span class="hvr-div-link"></span></a>
+                    </div>
+
+
+
+                </div>
+                <!-- end isotope grid -->
+            </div>
+            <!-- end column -->
+        </div>
+        <!-- end row -->
+
+        <!-- Experiment Modals -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+        <!-- end modals -->
+
+    </main>
+    <!-- end main -->
+
+    <footer class="OE-pad-left page-footer">
+        <div class="footer-copyright ">
+            <div class="container newFooter">
+                <i class="tiny material-icons">email</i><a href="mailto:nbrosowsky@gradcenter.cuny.edu"> nbrosowsky@gradcenter.cuny.edu</a>
+                <br /> Website built by N.P. Brosowsky
+                <br /> Copyrights <i class="tiny material-icons">copyright</i> 2017 All Rights Reserved by N.P. Brosowsky.
+            </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/responsivevoice.js"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script>
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            getSortData: {
+                category: '[data-category]',
+                weight: function(itemElem) {
+                    var weight = $(itemElem).find('.weight').text();
+                    return parseFloat(weight.replace(/[\(\)]/g, ''));
+                }
+            }
+        });
+
+        // filter functions
+        var filterFns = {
+            // show if number is greater than 50
+            numberGreaterThan50: function() {
+                var number = $(this).find('.number').text();
+                return parseInt(number, 10) > 50;
+            },
+            // show if name ends with -ium
+            ium: function() {
+                var name = $(this).find('.name').text();
+                return name.match(/ium$/);
+            }
+        };
+
+        // bind filter button click
+        $('.filters').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            // use filterFn if matches value
+            filterValue = filterFns[filterValue] || filterValue;
+            $grid.isotope({
+                filter: filterValue
+            });
+        });
+
+        // bind sort button click
+        $('#sorts').on('click', 'button', function() {
+            var sortByValue = $(this).attr('data-sort-by');
+            $grid.isotope({
+                sortBy: sortByValue
+            });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each(function(i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function() {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.modal').modal();
+
+            $(".button-collapse").sideNav({
+                    menuWidth: 250,
+                }
+
+            );
+            $('.collapsible').collapsible({
+                draggable: true,
+            });
+
+            $('ul.tabs').tabs({
+
+            });
+
+            $('.scrollspy').scrollSpy({
+                activeClass: "pinActive",
+            });
+            //
+            $('#sideTable').pushpin({
+                top: 350,
+                //  offset: 200
+            });
+
+
+            // hide pinned table on load //
+            // click tab to show //
+            $('#sideTable').hide();
+
+            $('.addPin').click(function() {
+                $('#sideTable').show();
+            });
+
+            $('.removePin').click(function() {
+                $('#sideTable').hide();
+            });
+            //
+            // $("#showAll").click(function(){
+            //   $('.tabContent').toggle();
+            //   $('.tabs').toggle();
+            //   $('.active').toggle();
+            // })
+            // $("li:has(.active)").css("background-color", "#039be5")
+            // $("a.btn").hover(function() {
+            //
+            //   $(this).addClass("lighten-2"); //Add the active class to the area is hovered
+            // }, function() {
+            //   $(this).removeClass("lighten-2");
+            // });
+            // external js: isotope.pkgd.js
+
+
+        });
+
+    </script>
+</body>
+
+</html>

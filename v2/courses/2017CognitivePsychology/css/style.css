@@ -1,0 +1,101 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+/* sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* restyle side-nav */
+.courseInfo {
+  padding-bottom: 30px;
+}
+
+.courseInfo li {
+  line-height: normal;
+}
+
+
+/* Restyle button colors */
+ .btn:focus, .btn-large:focus,
+ .btn-floating:focus {
+   background-color: #b71c1c;
+ }
+
+ .btn, .btn-large {
+   background-color: #b71c1c;
+ }
+
+ .btn:hover, .btn-large:hover {
+   background-color: #ef5350;
+ }
+
+ .btn-floating {
+   background-color: #b71c1c;
+ }
+
+ .btn-floating:hover {
+   background-color: #ef5350;
+ }
+
+ .side-nav li > a.btn:hover, .side-nav li > a.btn-large:hover, .side-nav li > a.btn-large:hover {
+   background-color: #ef5350;
+ }
+
+ .side-nav li > a.btn-floating:hover {
+   background-color: #ef5350;
+ }
+/* end restyle button colors */
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+/* restrict width for side-nav */
+.nav-wrapper {
+  width: 85%;
+}
+
+/* height for page title */
+.title-header {
+  height: 250px;
+}
+
+
+/* overlap cards with title header */
+.neg-marg {
+  margin-top: -100px;
+}
+
+
+/* remove side-nav and create top-nav when small */
+@media screen and (min-width: 992px) {
+    .pad-left {
+        padding-left: 300px;
+    }
+    .top-nav {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+  .top-nav {
+    display: block;
+  }
+}

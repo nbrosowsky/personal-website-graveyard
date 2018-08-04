@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="N.P. Brosowsky" content="Exp. Template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Stylesheets
+	============================================= -->
+    <link rel="stylesheet" href="template.css" type="text/css" />
+
+
+    <!--- Javascript on page load
+	============================================= -->
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="template.js"></script>
+
+    <!-- Document Title
+	============================================= -->
+    <title>Template</title>
+
+</head>
+
+<body>
+    <!-- Trial Counter Display
+		============================================= -->
+    <div class="top">
+        <h1 class="countDisplay"></h1>
+    </div>
+    <!-- #trial count display end -->
+
+    <!-- Content
+		============================================= -->
+    <div class="contentDisplay">
+        <div class="instructionDisplay">
+            <p>
+                Welcome to the experiment!
+            </p>
+            <p>
+                This is a general template for an html experiment. This is normally where you would display the instructions.
+            </p>
+            <p>
+                For this demo, your task is to identify the letter you see on the screen using the keyboard.
+              </p>
+            <p>
+                Press the "start" button to begin the first trial.
+            </p>
+            <button id="beginExp" class="button">start</button>
+        </div>
+
+        <div class="targetDisplay"></div>
+        <div class="feedbackDisplay"></div>
+
+        <div class="exitDisplay">
+            <div class="debrief">
+              Here's the results from the experiment. You can click the button below to download a CSV file with the complete data set.
+            </div>
+            <div class="results-1"></div>
+            <div class="results-2"></div>
+            <br />
+            <button id="downloadCSV" class="button">download data</button>
+        </div>
+
+    </div>
+    <!-- #content end -->
+
+
+    <script>
+        /* runs function that will set up the initial display,
+        * functions for listening for keypresses and buttons
+        */
+        initiateDisplay();
+    </script>
+
+</body>
+
+</html>

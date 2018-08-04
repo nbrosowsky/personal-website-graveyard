@@ -1,0 +1,402 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.table-noPadding > tbody > tr > td,
+.table-noPadding > tbody > tr > th,
+.table-noPadding > tfoot > tr > td,
+.table-noPadding > tfoot > tr > th,
+.table-noPadding > thead > tr > td,
+.table-noPadding > thead > tr > th {
+    padding: 0px;
+}
+
+.paddingbottom {
+  padding-bottom: 10px !important;
+}
+
+.paddingleft {
+  padding-left: 10px !important;
+}
+
+.emphasis-underline{
+  text-decoration: underline;
+}
+
+.jumpTarget::before{
+  content:" ";
+  display: block;
+  height: 104px;
+  margin-top: -104px;
+  visibility: hidden;
+}
+
+/*-- Static Header / does not resize --*/
+
+#logo img {
+    height: 40px;
+    margin: 10px 0 10px;
+    -webkit-transition: margin .4s ease, height .4s ease, opacity .3s ease;
+    -o-transition: margin .4s ease, height .4s ease, opacity .3s ease;
+    transition: margin .4s ease, height .4s ease, opacity .3s ease;
+}
+
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
+    height: 40px;
+}
+
+
+/*-- Programming --*/
+
+.filter-exp {
+    display: block;
+    color: white;
+    width: 25%;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+
+}
+
+
+.hvr-grow:hover{
+  transition: all 100ms;
+  width: 98%;
+  height: 98%;
+  margin: 1%;
+  padding: 6.5%;
+  cursor: pointer;
+  cursor: hand;
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.3);
+ -webkit-box-shadow:0 0 10px 1px rgba(0,0,0,0.3)
+}
+
+.grid {
+    margin: 20px;
+}
+
+
+/*-- Demo Experiments --*/
+
+.exp-image {
+    float: left;
+    width: 25%;
+    margin-right: 30px;
+}
+
+
+/* ----------------------------------------------------------------
+	exp list
+-----------------------------------------------------------------*/
+
+.exp-shadow {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.exp, .exp-image {
+    position: relative;
+}
+
+.exp-image>a, .exp-image img {
+    display: block;
+}
+
+.exp-desc {
+    text-align: center;
+    padding: 5px;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.exp-desc.exp-desc-bg {
+    background-color: #FFF;
+    padding: 10px 0 30px;
+}
+
+.exp .si-share {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.exp .si-share .social-icon {
+    font-size: 14px;
+    width: 34px;
+}
+
+.exp-title {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 4%;
+    padding-right: 15px;
+}
+
+.exp-title h4 {
+    display: block;
+    margin-bottom: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+.exp-title span {
+    display: block;
+    color: #096EB7;
+    font-weight: 400;
+    font-family: 'Crete Round', serif;
+    font-style: italic;
+    font-size: 2em;
+    margin-top: 5px;
+}
+
+#filter-exp:after {
+    content: '';
+    display: block;
+    margin-top: 75%;
+}
+
+.exp-item {
+    width: 95%;
+    height: 95%;
+    font-size: 30px;
+    margin: 2.5%;
+    padding: 5%;
+    color: white;
+    transition: all 100ms;
+}
+
+
+
+.exp-item.att {
+    background-color: #FF6B2B;
+}
+
+.exp-item.att:hover {
+    background-color: #AF3400;
+    /* -- background-color: #E04604 */
+
+}
+
+.exp-item.learn {
+    background-color: #2A83D1;
+}
+
+.exp-item.learn:hover {
+    background-color: #075091;
+    /* -- background-color: #0B6FC9 */
+
+
+}
+
+.exp-item.mem {
+    background-color: #00B1B2;
+}
+
+.exp-item.mem:hover {
+    background-color: #006A6A;
+    /* -- background-color: #008787 */
+
+}
+
+.exp-item.multi {
+    background-color: #FF3535;
+}
+
+.exp-item.multi:hover {
+    background-color: #B30000;
+    /* -- background-color: #E90707 */
+
+}
+
+.bgicon-left {
+    display: block;
+    position: absolute;
+    bottom: -60px;
+    left: -50px;
+    font-size: 210px;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.exp-content {
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.exp-content p:last-child {
+    margin-bottom: 0;
+}
+
+.exp-overlay, .exp-overlay:before {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+body:not(.device-touch) .exp-overlay {
+    -webkit-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.exp-overlay:before {
+    content: '';
+    z-index: auto;
+    background-color: #FFF;
+    opacity: 0.75;
+}
+
+.exp-overlay .social-icon {
+    float: none;
+    position: relative;
+    z-index: 3;
+    margin: 0 3px !important;
+    display: inline-block;
+}
+
+.exp:hover .exp-overlay {
+    opacity: 1;
+}
+
+
+/* exp Center
+-----------------------------------------------------------------*/
+
+.exp.center .exp-title:after {
+    left: 50%;
+    margin-left: -40px;
+}
+
+
+/* filter-exp when in List format
+-----------------------------------------------------------------*/
+
+.exp.exp-list .exp-image {
+    float: left;
+    width: 200px;
+    margin-right: 30px;
+}
+
+.exp.exp-list .exp-desc {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.exp.exp-list .exp-title {
+    padding-top: 0;
+}
+
+.exp .exp-desc>.social-icon {
+    margin-top: 20px;
+}
+
+.exp .exp-content~.social-icon {
+    margin-top: 30px;
+}
+
+.exp:not(.exp-list) .social-icon {
+    display: inline-block;
+    float: none;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
+/*-- Teaching Homepage --*/
+
+.teach-resp {
+    min-height: 400px !important;
+}
+
+
+/*-- Custom Responsive CSS --*/
+
+@media (max-width: 1199px) {
+    .exp-image {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .filter-exp {
+        width: 33.333%;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .teach-resp {
+        min-height: 200px !important;
+    }
+    .filter-exp {
+        width: 50%;
+        height: 275px;
+    }
+
+    .jumpTarget::before{
+      content:" ";
+      display: block;
+      height: 0px;
+      margin-top: 0px;
+      visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {
+    .filter-exp {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+
+
+    .exp-list .exp-title {
+        margin-top: 15px;
+    }
+    .exp-image-responsive {
+        display: block;
+        margin: 0 auto !important;
+    }
+    .exp-desc {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .title-responsive {
+        font-size: 2em !important;
+        text-align: center !important;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {}
+
+@media (max-width: 479px) {}

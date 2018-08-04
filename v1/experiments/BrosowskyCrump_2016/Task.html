@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="N.P. Brosowsky" content="Exp. Template" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/StyleExp.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!--- Javascript on page load
+	============================================= -->
+	<script type="text/javascript" src="js/StimCreation.js"></script>
+	<script type="text/javascript" src="js/Required.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<!--- Check for updated browser  -->
+	<script>
+		var _umb = {
+			display: false
+		};
+
+		(function(u) {
+			var s = document.createElement('script');
+			s.async = true;
+			s.src = u;
+			var b = document.getElementsByTagName('script')[0];
+			b.parentNode.insertBefore(s, b);
+		})('//updatemybrowser.org/umb.js');
+
+
+			// if browser is out of date show alternate page //
+			window.onload = function() {
+				if (UMB.getStatus() != "latest") {
+					$(".demo-container").hide();
+					$(".oldBrowser").show();
+					$(".task-container").hide();
+				} else {
+					$(".demo-container").show();
+					$(".oldBrowser").hide();
+					$(".task-container").hide();
+				}
+			}
+	</script>
+
+
+	<!-- document.ready loading -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+
+				$('.task-container').hide();
+				$('.top').hide();
+
+				$('.instructions-container').hide();
+
+				///----------------- BUTTON EVENTS ------------------///
+
+				// Clicking Submit Demographics Button
+				$(".endDemButton").click(function() {
+					deminfo = $("#Country").val() + "," + $("#Sex:checked").val() + "," +
+						$("#Age:checked").val() + "," + $("#Hand:checked").val() + "," +
+						$("#Vision:checked").val() + "," + $("#English:checked").val()
+						//+ BrowserInfo[0];
+					$(".demo-container").hide();
+					$(".instructions-container").show();
+					window.scrollTo(0, 0);
+				});
+
+				// End instruction screen //
+				$("#endInstructionButton").click(function() {
+					$(".demo-container").hide();
+					$(".instructions-container").hide();
+					$(".task-container").show();
+					$(".top").show();
+				});
+			})
+			// ----------- END BUTTON EVENTS ------------- //
+
+		// ----------- STIMULUS PRESENTATION EVENTS ------------ //
+
+		// Triggers Trial //
+		function next() {
+
+			trialstep++;
+			track = 0;
+			keytest = 0;
+			$('.TargetDisplay').show();
+			data[trialindex] = trialarray[trialindex].concat();
+			$("#Tnumdisp").html(trialindex + 1 + " /" + totTrials + " remaining"); // show current trial
+			blank();
+		}
+
+
+		// Triggers blank display
+		function blank() {
+			$(".up-container").css("visibility", "hidden");
+			$(".center-container").css("visibility", "hidden");
+			$(".down-container").css("visibility", "hidden");
+			$('#up').css("color", "black")
+			$('#down').css("color", "black")
+				//$("#CenterDisplay").html("");
+			setTimeout(fixation, 500);
+
+		}
+
+
+		// Triggers Fixation
+		function fixation() {
+			$(".up-container").css("visibility", "hidden");
+			$(".down-container").css("visibility", "hidden");
+			$('#center').html("+")
+			$('.center-container').css("visibility", "visible")
+			setTimeout(blank2, 500);
+		}
+
+
+		function blank2() {
+			$(".up-container").css("visibility", "hidden");
+			$(".center-container").css("visibility", "hidden");
+			$(".down-container").css("visibility", "hidden");
+			//$("#CenterDisplay").html("");
+			setTimeout(stim, 500);
+
+		}
+
+		function stim() {
+			$('.center-container').css("visibility", "hidden")
+			$('#' + trialarray[trialindex].location + '_0').css("background-color", trialarray[trialindex].color[0])
+			$('#' + trialarray[trialindex].location + '_1').css("background-color", trialarray[trialindex].color[1])
+			$('#' + trialarray[trialindex].location + '_2').css("background-color", trialarray[trialindex].color[2])
+			$('#' + trialarray[trialindex].location + '_3').css("background-color", trialarray[trialindex].color[3])
+
+			$('#' + trialarray[trialindex].location + '_0').html(trialarray[trialindex].letter[0])
+			$('#' + trialarray[trialindex].location + '_1').html(trialarray[trialindex].letter[1])
+			$('#' + trialarray[trialindex].location + '_2').html(trialarray[trialindex].letter[2])
+			$('#' + trialarray[trialindex].location + '_3').html(trialarray[trialindex].letter[3])
+
+			$('.' + trialarray[trialindex].location + '-container').css("visibility", "visible")
+
+			setTimeout(cue, 300);
+
+		}
+
+		function cue() {
+			$('#' + trialarray[trialindex].location + '_0').css("background-color", "grey")
+			$('#' + trialarray[trialindex].location + '_1').css("background-color", "grey")
+			$('#' + trialarray[trialindex].location + '_2').css("background-color", "grey")
+			$('#' + trialarray[trialindex].location + '_3').css("background-color", "grey")
+
+			$('#' + trialarray[trialindex].location + '_0').html(trialarray[trialindex].Lcue[0])
+			$('#' + trialarray[trialindex].location + '_1').html(trialarray[trialindex].Lcue[1])
+			$('#' + trialarray[trialindex].location + '_2').html(trialarray[trialindex].Lcue[2])
+			$('#' + trialarray[trialindex].location + '_3').html(trialarray[trialindex].Lcue[3])
+
+			$('#center').html(trialarray[trialindex].Icue)
+			$('#' + trialarray[trialindex].location).css("color", "white")
+			$('.center-container').css("visibility", "visible")
+
+
+			keytest = 1; //turn on keydown recording
+			d = new Date();
+			data[trialindex].push(d.getTime());
+
+		}
+
+
+		// ------------ END STIMULUS PRESENTATION ------------ //
+	</script>
+	<!---  End Javascript on page load
+	============================================= -->
+
+	<!-- Document Title
+	============================================= -->
+	<title>Template</title>
+
+</head>
+
+<body>
+
+	<!-- Document Wrapper
+
+
+	<!-- Page Title
+		============================================= -->
+	<div class="top" id="Tnumdisp">
+		<h1>000/320 trials</h1>
+		<button class="btn btn-primary" onclick="basicPopup2('popUpInstructions.html');return false">Show Instructions</button>
+		<button class="btn btn-primary" onclick="basicPopup2('popUpInstructions.html');return false">End Demo</button>
+
+	</div>
+	<!-- #page-title end -->
+
+	<!-- Content
+		============================================= -->
+		<div class="oldBrowser">
+			<p>
+				Your browser is out of date!
+			</p>
+		</div>
+
+
+	<div class="task-container">
+		<div class="TargetDisplay ">
+			<div class="up-container">
+				<p class="SubDisplay">
+					<span id="up_0" style="background: red" class="letters">a</span><span id="up_1" style="background-color: blue" class="letters">e</span><span id="up_2" accesskey="" style="background-color: yellow" class="letters">s</span><span id="up_3" style="background-color: green"
+									class="letters">c</span>
+				</p>
+			</div>
+
+
+
+			<div class="center-container">
+				<p class="SubDisplay" id="center">
+					+
+				</p>
+			</div>
+
+
+
+			<div class="down-container">
+				<p class="SubDisplay" id="down">
+					<span id="down_0" style="background: grey" class="letters">-</span><span id="down_1" style="background-color: grey" class="letters">-</span><span id="down_2" style="background-color: grey" class="letters">-</span><span id="down_3" style="background-color: grey"
+									class="letters">?</span>
+				</p>
+			</div>
+
+		</div>
+	</div>
+	<div class="demo-container">
+		<div id="Demographics">
+			<h2>As a part of the research we are collecting general demographic information. </h2>
+			<p><em>You are not required to complete these questions. </em></p>
+			<p>However, doing so will help us better understand our results.</p>
+
+			<div id="Questions">
+				<p>1. Country </p>
+				<input id="Country" type="text"> </p>
+				<hr>
+				<p>2.
+					<input id="Sex" type="radio" name="SexGroup" value="Male"> Male
+					<input id="Sex" type="radio" name="SexGroup" value="Female"> Female</p>
+				<hr>
+				<p>3. Age Range</p>
+				<input id="Age" type="radio" name="AgeGroup" value="20">
+				< 20 <input id="Age" type="radio" name="AgeGroup" value="25"> 20 - 25
+					<input id="Age" type="radio" name="AgeGroup" value="30"> 26 - 30
+					<input id="Age" type="radio" name="AgeGroup" value="35"> 31 - 35
+					<input id="Age" type="radio" name="AgeGroup" value="40"> 36 - 40
+					<input id="Age" type="radio" name="AgeGroup" value="45"> 41 - 45
+					<input id="Age" type="radio" name="AgeGroup" value="50"> 46 - 50
+					<input id="Age" type="radio" name="AgeGroup" value="55"> 51 - 55
+					<input id="Age" type="radio" name="AgeGroup" value="60"> 56 - 60
+					<input id="Age" type="radio" name="AgeGroup" value="65"> 61 - 65
+					<input id="Age" type="radio" name="AgeGroup" value="70"> 66 and above
+					<br>
+					<hr>
+					<p>4. Handedness</p>
+					<input id="Hand" type="radio" name="HandGroup" value="Right"> Right
+					<input id="Hand" type="radio" name="HandGroup" value="Left"> Left
+					<input id="Hand" type="radio" name="HandGroup" value="Both"> Both
+					<hr>
+					<p>5. Vision</p>
+					<input id="Vision" type="radio" name="VisionGroup" value="Normal"> Normal eyesight without needing glasses
+					<br>
+					<input id="Vision" type="radio" name="VisionGroup" value="Corrected"> Corrected Vision (wear glasses)
+					<br>
+					<input id="Vision" type="radio" name="VisionGroup" value="problems"> Poor eyesight and do not wear glasses
+					<br>
+					<hr>
+					<p>6. English Ability</p>
+					<input id="English" type="radio" name="EnglishGroup" value="First"> First-language speaker
+					<br>
+					<input id="English" type="radio" name="EnglishGroup" value="Second"> Second-language speaker
+					<br>
+					<input id="English" type="radio" name="EnglishGroup" value="None"> No English ability
+					<br>
+					</hr>
+			</div>
+			<button class="btn btn-primary btn-lg endDemButton center-block">Continue</button>
+		</div>
+	</div>
+
+	<div class="instructions-container">
+		<div class="instructions">
+			<h1>Instructions</h1>
+			<div class="inst-text">
+				<p>On each trial you will be briefly presented four letters (a,o,e, and c) on top of four colored squares (red, blue, green, and yellow)</p>
+				<p style="padding-left: 50px">
+					<strong>For example:</strong>
+				</p>
+				<div class="example-container">
+					<p class="SubDisplay" id="up">
+						<span style="background: red" class="letters">a</span><span style="background-color: blue" class="letters">e</span> <span style="background-color: yellow" class="letters"> o </span> <span style="background-color: green" class="letters">c</span>
+					</p>
+				</div>
+				<p>Your task is to remember the positions of each of the four letters <em>and</em> the positions of the four colors. Immediately after being presented with the four letters and four colors you will be asked to identify either a color or a letter in one
+					of the four positions
+				</p>
+				<p style="padding-left: 50px">
+					<strong>For example:</strong>
+				</p>
+				<div class="example-container">
+					<p class="SubDisplay" id="down" style="color: white">
+						<span style="background: none" class="letters">-</span><span style="background-color: none" class="letters">-</span><span style="background-color: none" class="letters">-</span><span style="background-color: none" class="letters">?</span>
+					</p>
+				</div>
+				<div class="example-container">
+					<p class="SubDisplay" id="down" style="color: white">
+						Color?
+					</p>
+				</div>
+				<p style="padding-left: 50px">
+					<strong>Would indicate that you need to respond with the color in the fourth position, green</strong>
+				</p>
+				<br />
+				<p>When you are ready, press the start button to begin</p>
+			</div>
+
+			<button id="endInstructionButton" class="btn btn-primary btn-lg  center-block BStart"> Start </button>
+		</div>
+
+
+	</div>
+
+	<!-- #content end -->
+
+
+	<!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+
+
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+
+	<!-- External JavaScripts
+	============================================= -->
+
+
+
+
+	<!-- Footer Scripts
+	============================================= -->
+
+</body>
+
+</html>

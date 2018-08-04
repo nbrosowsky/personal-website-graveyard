@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Cognitive Psychology | Home</title>
+  <link rel="shortcut icon" href="/images/favicon_32.png" />
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <header>
+    <nav class="blue-grey darken-4 pad-left top-nav" role="navigation">
+      <div class="container nav-wrapper"><a id="logo-container" href="#" class="brand-logo flow-text"><span class="title-text">Cognitive Psychology</span></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+    <ul id="nav-mobile" class="side-nav fixed">
+      <li>
+        <div class="userView">
+          <div class="background">
+             <img src="images/2B.jpeg">
+          </div>
+          <h5 class="white-text"> Cognitive Psychology</h5>
+          <ul class="white-text courseInfo">
+            <li>
+              PSYC.3530 / Spring 2018
+            </li>
+            <li>
+              3:40PM - 4:55PM MW
+            </li>
+            <li>
+              2604 James Hall
+            </li>
+            <li>
+              nbrosowsky@gradcenter.cuny.edu
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="bold"><a href="index.html" class="waves-effect waves-red">News / Announcements</a></li>
+      <li class="bold"><a href="syllabus.html" class="waves-effect waves-red">Syllabus</a></li>
+      <li class="bold"><a href="content.html" class="waves-effect waves-red">Course Materials</a></li>
+      <li class="bold"><a href="QALMRI.html" class="waves-effect waves-red">QALMRI Assignments &amp; Instructions</a></li>
+    </ul>
+  </header>
+  <main class="pad-left s12 grey lighten-5" >
+    <div class="row title-header s12  blue-grey darken-3">
+      <div class="col s1"></div>
+      <div class="col s10">
+        <h2 class="page-title white-text">Syllabus</h2>
+        <h3 class="white-text"></h3>
+      </div>
+      <div class="col s1"></div>
+    </div>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="row neg-marg">
+        <div class="row col s12">
+
+          <div class="row">
+
+            <div class="card">
+
+
+              <div class="card-content">
+                <a class="btn white-text" style="width: 100%" href="documents/Syllabus-2018-CognitivePsychology.pdf" target="_blank">Download PDF of Syllabus</a>
+                <br />
+                <br />
+                <p>
+                Last Updated: March 10, 2018
+              </p>
+              <br />
+
+                <div id="syllabus">
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </main>
+  <footer class="page-footer pad-left blue-grey darken-3">
+
+    <div class="footer-copyright blue-grey darken-3">
+      <div class="container">
+        &#169 2017 N.P. Brosowsky
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $(function() {
+      $("#syllabus").load("syllabusContent.html");
+    });
+  </script>
+</body>
+
+</html>

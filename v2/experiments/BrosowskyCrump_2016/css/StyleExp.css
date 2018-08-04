@@ -1,0 +1,466 @@
+
+/* ----------------------------------------------------------------
+	Basic
+-----------------------------------------------------------------*/
+
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0px;
+	height: 0px;
+	line-height: 0;
+	width: 100%;
+	overflow:hidden;
+}
+
+::selection {
+	background: #1265A8;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #1265A8; /* Firefox */
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #1265A8; /* Safari */
+	color: #FFF;
+	text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+
+body {
+	line-height: 1.5;
+	color: #555;
+	font-family: 'Helvetic', arial;
+}
+
+a {
+	text-decoration: none !important;
+	color: blue;
+}
+
+a:hover { color: #222; }
+
+.altlink {
+	text-decoration: none !important;
+	color: black;
+}
+
+.altlink:hover {
+	color: grey !important;
+}
+
+a img { border: none; }
+
+img { max-width: 100%; }
+
+iframe { border: none !important; }
+
+
+
+
+
+header{
+	width: 100%;
+	height: 126px;
+	background-color: #292929;
+	border-bottom: 4px #1e1e1e solid;
+
+
+}
+
+footer{
+	width: 100%;
+	height: 100PX;
+	background: #292929;
+	border-top: 1px #e1e0e0 solid;
+	margin-top: -1px;
+
+}
+
+
+.title{
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: 'Helvetica', arial;
+	font-weight: bold;
+	font-size: 25pt;
+	color: white;
+	font-family: 'Helvetica', arial;
+	}
+
+.wrapper{
+	height: auto;
+	margin: 0 auto;
+	font-family: 'Helvetica', arial;
+}
+
+
+.landing,
+.main,
+.explorerInst,
+.endExp,
+.repInstructions {
+	font-family: 'Helvetica', arial;
+	font-size: 16px;
+	color: #000;
+	line-height: 20px;
+	margin-left: 10%;
+	margin-right:10%;
+	}
+
+.trial,
+.NextQ,
+.QuizButton {
+	font-family: 'Helvetica', arial;
+	display: block;
+	padding: 10px 30px 13px 30px;
+	background: #ffffff;
+	border: 2px #0066CC solid;
+	color: #0066CC;
+	text-decoration: none;
+	margin: 50px auto;
+	font-size: 14px;
+	outline:none;
+
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	-ms-border-radius: 100px;
+}
+
+
+
+.trial:hover{
+	border: 2px #ffffff solid;
+	background: #0066CC;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: 'Helvetica', arial;
+	}
+
+
+.NextQ:hover{
+	border: 2px #ffffff solid;
+	background: #0066CC;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: 'Helvetica', arial;
+	}
+
+/* Debriefing */
+textarea {
+	width: 100%;
+	height: 126px;
+	}
+
+input[type=submit] {
+	font-family: 'Helvetica', arial;
+	display: block;
+	padding: 10px 75px 13px 75px;
+	background: #ffffff;
+	border: 2px #0066CC solid;
+	color: #0066CC;
+	text-decoration: none;
+	margin: 50 auto;
+	font-size: 16px;
+	outline:none;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	-ms-border-radius: 100px;
+
+}
+
+
+input[type=submit]:hover{
+	border: 2px #ffffff solid;
+	background: #0066CC;
+	color: #ffffff;
+	cursor: pointer;
+	}
+
+/* TURKconsent.html */
+.consentWrapper {
+	height: 100px;
+	background-color: #292929;
+	border-bottom: 4px #1e1e1e solid;
+	color: #ffffff;
+	width: 100%;
+	}
+
+.consentH {
+	display: block;
+	color: #ffffff;
+	float: left;
+	margin: 20px 20px 20px 20px;
+	line-height: 40px;
+	}
+
+.altH3 {
+	margin: 30px 0 -10px 0;
+	}
+
+.previewMode {
+	display: relative;
+	height: 10px;
+	z-index: -1;
+}
+
+/* Task.html */
+
+#Demographics {
+	font-family: 'Helvetica', arial;
+	font-size: 16px;
+	color: black;
+	line-height: 20px;
+ margin: 5% 10% 5% 10%;
+	width: inherit;
+	}
+
+#Questions {
+	border: 2px black solid;
+	padding: 1%;
+	}
+
+
+input[type=radio] {
+	margin: 0 0px 0 10px !important;
+	outline:none;
+	}
+
+#Country {
+	margin: 0 0px 0 10px;
+	}
+
+.endDemButton,
+.BStart {
+	margin-top: 10px;
+
+}
+
+#BeginExp {
+	font-size: 20px;
+	margin-top: 10%;
+	}
+
+#BStart2 {
+	font-family: 'Helvetica', arial;
+	display: block;
+	padding: 10px 75px 13px 75px;
+	background: #ffffff;
+	border: 2px #0066CC solid;
+	color: #0066CC;
+	text-decoration: none;
+	margin: 50 auto;
+	font-size: 16px;
+	outline:none;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	-ms-border-radius: 100px;
+}
+
+
+
+
+#BStart2:hover{
+	border: 2px #ffffff solid;
+	background: #0066CC;
+	color: #ffffff;
+	cursor: pointer;
+	}
+
+	#QuizButton:hover{
+		border: 2px #ffffff solid;
+		background: #0066CC;
+		color: #ffffff;
+		cursor: pointer;
+		}
+
+input[type=button]:hover{
+	border: 2px #ffffff solid;
+	background: #0066CC;
+	color: #ffffff;
+	cursor: pointer;
+	}
+
+
+/* object displays */
+
+
+input[id="count2"]{
+	text-align:center;
+	line-height: 25px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+
+
+#page-title{
+	height: 200px;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+ display: block;
+}
+
+.task-container {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+
+.demo-container,
+.instructions-container,
+.oldBrowser {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.instructions{
+	width: 70vw;
+	height: 80vh;
+}
+.inst-text {
+	text-align: left;
+	font-size: 16pt;
+	display: block;
+	border-style: solid;
+	padding: 5px;
+}
+
+.TargetDisplay {
+	min-width: 600px;
+
+}
+
+.col_last {
+	margin-right: 0 !important;
+	clear: right;
+}
+
+
+.center-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	width: 600px;
+	font-family: "consolas";
+	letter-spacing: normal;
+	font-size: 50px;
+	color: white;
+}
+
+.up-container,
+.down-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 0 100px;
+	padding: 0;
+	height: 100px;
+	width: 400px;
+	font-family: "consolas";
+	font-size: 40px;
+	background-color: grey;
+
+}
+
+.example-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	padding: 0;
+	height: 75px;
+	width: 250px;
+	font-family: "consolas";
+	font-size: 40px;
+	background-color: grey;
+
+}
+
+.letters {
+	line-height: 90%;
+	padding-bottom: 2%;
+	padding-left: 4px;
+	padding-right: 4px;
+	display: block;
+	float: left;
+}
+
+.SubDisplay {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	visibility: inherit;
+}
+
+.top{
+	height: 100px;
+	padding: 0;
+	margin-left: 25px;
+	z-index: 2;
+	float: left;
+	position: fixed;
+	color: white;
+
+}
+
+#ResponseCollection {
+  padding: 0;
+  font-size: 50pt;
+  font-weight: bold;
+ text-align: center;
+}
+
+
+#Tnumdisp {
+  padding: 0;
+  font-size: 15pt;
+  font-weight: bold;
+ text-align: left;
+ 	margin-left: 20px;
+	 border-style:none
+}
